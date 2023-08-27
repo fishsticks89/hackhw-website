@@ -7,5 +7,6 @@
 <style>
     .bkg {
         width: 100%;
+        max-width: 120vh;
     }
 </style>
