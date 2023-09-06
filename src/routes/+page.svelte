@@ -54,9 +54,31 @@
         Welcome to HackHW's Game Jam – a 48-hour programming marathon judged by
         a panel of alumni in tech
     </p>
+    <div class="buttons">
+        <button class="dobuttons">
+            Join Now
+        </button>
+        <button class="dobuttons">Learn More</button>
+    </div>
 </div>
 
 <style>
+    .dobuttons {
+        border: 0px;
+        border-radius: 10px;
+        padding: 10px 20px;
+        font-family: "Roboto-SemiBold", monospace;
+        font-size: 0.9rem;
+        margin: 10px;
+        cursor: pointer;
+    }
+
+    .buttons {
+        width: fit-content;
+        margin: auto;
+        margin-top: 20px;
+    }
+
     p {
         font-family: "Inter-SemiBold", monospace;
         font-size: 1.3rem;
@@ -67,13 +89,13 @@
     }
 
     .body {
-        margin-top: 30px;
-
         height: 100vh;
         width: 85%;
         max-width: 80vh;
         display: block;
         margin: auto;
+        margin-top: 40px;
+
     }
 
     .schedule-icon {
