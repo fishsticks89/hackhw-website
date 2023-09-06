@@ -1,8 +1,12 @@
 <script lang="ts">
     import Bouncy from "./../lib/bouncy.svelte";
+    let stout = true;
 </script>
 
-<Bouncy />
+{#if stout}
+    <Bouncy />
+{/if}
+<img class="logo" src="/whole-logo.svg" alt="logo" srcset="" />
 <img class="bkg" src="/bkg.png" alt="" />
 <!-- a fixed bottom white bar with black top outline with button to sign up -->
 <div class="bottom-bar">
@@ -18,9 +22,15 @@
 </div>
 
 <style>
+    .logo {
+        left: 7px;
+        top: 3px;
+        position: fixed;
+        width: 30vw;
+        max-width: 200px;
+    }
     .bkg {
         width: 100%;
-        max-width: 120vh;
         box-shadow: inset 0 0 0 2000px rgb(0, 0, 0);
     }
     .btn {
