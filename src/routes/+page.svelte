@@ -23,11 +23,11 @@
 
 <style>
     .logo {
-        left: 7px;
-        top: 3px;
+        left: 0px;
+        top: 0px;
         position: fixed;
-        width: 30vw;
-        max-width: 200px;
+        width: 20vw;
+        max-width: 170px;
     }
     .bkg {
         width: 100%;
