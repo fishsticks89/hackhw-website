@@ -111,7 +111,7 @@
     </div>
     <img class="sponsor-thank" src="/sponsor-thank.svg" alt="" srcset="" />
     <div class="sponsors">sponsors here</div>
-    <img bind:this={info} class="info" src="/info.svg" alt="" srcset="" />
+    <img bind:this={info} class="info" src={width > (height / 3) + 500 ? "/info.svg" : "/info-thin.svg"} alt="" srcset="" />
 </div>
 
 <style>
