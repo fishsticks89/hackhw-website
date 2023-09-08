@@ -145,6 +145,8 @@
         font-size: 14px;
         margin: 10px;
         cursor: pointer;
+
+        color: black;
     }
     #join {
         background-color: #ededed;
@@ -165,6 +167,11 @@
         width: fit-content;
         margin: auto;
         margin-top: 25px;
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
     }
 
     p {
