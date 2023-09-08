@@ -147,6 +147,8 @@
         cursor: pointer;
 
         color: black;
+
+        max-width: 35vw;
     }
     #join {
         background-color: #ededed;
