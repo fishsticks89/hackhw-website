@@ -23,7 +23,16 @@
     //     console.log("mounted");
     // });
     // if (browser) window.onresize = checkScrollBars;
+    let width: number;
+    let height: number;
+    let scroll: number;
+
+    $: showbuttons = height < width;
+
+    let info: HTMLElement;
 </script>
+
+<svelte:window bind:innerWidth={width} bind:innerHeight={height} />
 
 {#if stout}
     <Bouncy />
@@ -49,39 +58,120 @@
 </div>
 <img class="bkg" src="/bkg.png" alt="" />
 
+{#if showbuttons}
+    <div
+        class="buttons"
+        style={`
+        position: fixed;
+        bottom: 6px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #000000cc;
+        border-radius: 10px;
+    `}
+    >
+        <button
+            id="join"
+            class="dobuttons"
+            on:click={() => {
+                window.location.href =
+                    "https://bsf8x7mgm2l.typeform.com/to/xOLsX7CJ";
+            }}>Join Now</button
+        >
+        <button
+            id="learn"
+            class="dobuttons"
+            on:click={() => {
+                info.scrollIntoView({ behavior: "smooth" });
+            }}>Learn More</button
+        >
+    </div>
+{/if}
 <div class="body">
     <p>
         Welcome to HackHW's Game Jam – a 48-hour programming marathon judged by
         a panel of alumni in tech
     </p>
     <div class="buttons">
-        <button class="dobuttons">
-            Join Now
-        </button>
-        <button class="dobuttons">Learn More</button>
+        <button
+            id="join"
+            class="dobuttons"
+            on:click={() => {
+                window.location.href =
+                    "https://bsf8x7mgm2l.typeform.com/to/xOLsX7CJ";
+            }}>Join Now</button
+        >
+        <button
+            id="learn"
+            class="dobuttons"
+            on:click={() => {
+                info.scrollIntoView({ behavior: "smooth" });
+            }}>Learn More</button
+        >
     </div>
+    <img class="sponsor-thank" src="/sponsor-thank.svg" alt="" srcset="" />
+    <div class="sponsors">sponsors here</div>
+    <img bind:this={info} class="info" src="/info.svg" alt="" srcset="" />
 </div>
 
 <style>
+    .info {
+        margin-top: 50px;
+        width: 100%;
+    }
+    .sponsors {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+        background-color: gray;
+        height: 80px;
+    }
+    .sponsor-thank {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+
+        margin-top: calc(70px + 3vh);
+        width: calc(15rem + 3vmin);
+    }
     .dobuttons {
         border: 0px;
         border-radius: 10px;
-        padding: 10px 20px;
-        font-family: "Roboto-SemiBold", monospace;
-        font-size: 0.9rem;
+        height: 50px;
+        width: 180px;
+        font-family: "Roboto-Medium", monospace;
+        font-size: 14px;
         margin: 10px;
         cursor: pointer;
+    }
+    #join {
+        background-color: #ededed;
+    }
+    #learn {
+        background-color: black;
+        color: #dbdbdb;
+        content: "Learn More";
+
+        border-width: 2px;
+        border-style: solid;
+        border: 2px solid;
+
+        border: 1px solid #ff63c6;
     }
 
     .buttons {
         width: fit-content;
         margin: auto;
-        margin-top: 20px;
+        margin-top: 25px;
     }
 
     p {
         font-family: "Inter-SemiBold", monospace;
-        font-size: 1.3rem;
+        font-size: calc(1.3rem + 0.3vw);
+        line-height: 150%;
+
         color: #9a9a9a;
         text-align: center;
         margin: 0px;
@@ -89,13 +179,12 @@
     }
 
     .body {
-        height: 100vh;
+        padding-bottom: 50vh;
         width: 85%;
-        max-width: 80vh;
+        max-width: 2000px;
         display: block;
         margin: auto;
-        margin-top: 40px;
-
+        margin-top: calc(20px + 2vh);
     }
 
     .schedule-icon {
