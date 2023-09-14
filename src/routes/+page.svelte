@@ -65,6 +65,7 @@
   <div
     class="buttons"
     style={`
+        z-index: 100;
         position: fixed;
         bottom: 6px;
         left: 50%;
