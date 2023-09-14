@@ -110,7 +110,14 @@
         >
     </div>
     <img class="sponsor-thank" src="/sponsor-thank.svg" alt="" srcset="" />
-    <div class="sponsors">sponsors here</div>
+    <div class="sponsors">
+        <!-- wolfram, xyz, sticker-mule, onepassword, codecrafters -->
+        <img class="sponsor" src="/sponsors/wolfram.png" alt="" srcset="">
+        <img class="sponsor" src="/sponsors/xyz.png" alt="" srcset="">
+        <img class="sponsor" src="/sponsors/sticker-mule.jpeg" alt="" srcset="">
+        <img class="sponsor" src="/sponsors/onepassword.png" alt="" srcset="">  
+        <img class="sponsor" src="/sponsors/codecrafters.png" alt="" srcset="">
+    </div>
     <img bind:this={info} class="info" src={width > (height / 3) + 500 ? "/info.svg" : "/info-thin.svg"} alt="" srcset="" />
 </div>
 
@@ -119,14 +126,17 @@
         margin-top: 50px;
         width: 100%;
     }
+    .sponsor {
+        height: 100px;
+        margin: 20px;
+    }
     .sponsors {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
         margin-top: 50px;
-        background-color: gray;
-        height: 80px;
+
     }
     .sponsor-thank {
         position: relative;
