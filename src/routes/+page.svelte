@@ -114,11 +114,21 @@
   <img class="sponsor-thank" src="/sponsor-thank.svg" alt="" srcset="" />
   <div class="sponsors">
     <!-- wolfram, xyz, sticker-mule, onepassword, codecrafters -->
-    <img class="sponsor" src="/sponsors/wolfram.png" alt="" srcset="" />
-    <img class="sponsor" src="/sponsors/xyz.png" alt="" srcset="" />
-    <img class="sponsor" src="/sponsors/sticker-mule.jpeg" alt="" srcset="" />
-    <img class="sponsor" src="/sponsors/onepassword.png" alt="" srcset="" />
-    <img class="sponsor" src="/sponsors/codecrafters.png" alt="" srcset="" />
+    <a href="https://wolfram.com" target="_blank">
+      <img class="sponsor" src="/sponsors/wolfram.png" alt="" srcset="" />
+    </a>
+    <a href="https://gen.xyz" target="_blank">
+      <img class="sponsor" src="/sponsors/xyz.png" alt="" srcset="" />
+    </a>
+    <a href="https://mule.to/p4vf" target="_blank">
+      <img class="sponsor" src="/sponsors/sticker-mule.jpeg" alt="" srcset="" />
+    </a>
+    <a href="https://1password.com" target="_blank">
+      <img class="sponsor" src="/sponsors/onepassword.png" alt="" srcset="" />
+    </a>
+    <a href="https://codecrafters.io" target="_blank">
+      <img class="sponsor" src="/sponsors/codecrafters.png" alt="" srcset="" />
+    </a>
   </div>
   <img
     bind:this={info}
