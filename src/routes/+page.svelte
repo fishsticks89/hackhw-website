@@ -124,10 +124,10 @@
       <img class="sponsor" src="/sponsors/sticker-mule.jpeg" alt="" srcset="" />
     </a>
     <a href="https://1password.com" target="_blank">
-      <img class="sponsor" src="/sponsors/onepassword.png" alt="" srcset="" />
+      <img class="sponsor2" src="/sponsors/onepassword.png" alt="" srcset="" />
     </a>
     <a href="https://codecrafters.io" target="_blank">
-      <img class="sponsor" src="/sponsors/codecrafters.png" alt="" srcset="" />
+      <img class="sponsor2" src="/sponsors/codecrafters.png" alt="" srcset="" />
     </a>
   </div>
   <img
@@ -147,6 +147,12 @@
   .sponsor {
     height: 100px;
     margin: 20px;
+    width: auto;
+  }
+  .sponsor2 {
+    height: auto;
+    margin: 20px;
+    width: 350px;
   }
   .sponsors {
     display: flex;
