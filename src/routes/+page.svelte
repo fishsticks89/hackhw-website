@@ -4,46 +4,25 @@
   import Bouncy from "./../lib/bouncy.svelte";
   let stout = false;
 
-  // let scrollw = 0;
-  // let normalw = 0;
-
-  // const checkScrollBars = () => {
-  //     if (!browser) {
-  //         console.log("skipping");
-  //         return;
-  //     }
-  //     const b = document.body;
-
-  //     normalw = window.innerWidth;
-  //     scrollw = normalw - b.clientWidth;
-  //     console.log(scrollw);
-  // };
-  // onMount(() => {
-  //     checkScrollBars();
-  //     console.log("mounted");
-  // });
-  // if (browser) window.onresize = checkScrollBars;
   let width: number;
   let height: number;
   let scroll: number;
 
-  $: showbuttons = height < width;
+  $: showbuttons = false;
 
   let info: HTMLElement;
 </script>
 
 <svelte:window bind:innerWidth={width} bind:innerHeight={height} />
 
-{#if stout}
-  <Bouncy />
-{/if}
+<Bouncy />
 <img class="logo" src="/whole-logo.svg" alt="logo" srcset="" />
 <div class="nav">
   <button
     class="schedule-button"
     on:click={() => {
       window.open(
-        "https://docs.google.com/spreadsheets/d/1lq-d0DKjsmhQ3A1ko30wzc0JsueKVWni0c05Q-p0_mw/edit?usp=sharing",
+        "https://docs.google.com/spreadsheets/d/1_Me-8x1igpXHDvRlfJS48VWtKPci6cePmCpxLXASMm0/edit?gid=0#gid=0",
         "_blank"
       );
     }}
@@ -59,7 +38,7 @@
     <img src="/menu-button.svg" class="menu-icon" alt="" />
   </button>
 </div>
-<img class="bkg" src="/bkg.png" alt="" />
+<!-- <img class="bkg" src="/bkg.png" alt="" /> -->
 
 {#if showbuttons}
   <div
@@ -78,7 +57,7 @@
       id="join"
       class="dobuttons"
       on:click={() => {
-        window.location.href = "https://bsf8x7mgm2l.typeform.com/to/xOLsX7CJ";
+        window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSc52mNdDEJCgbfc097P2i7gtW0ZdeL0AITp1s8vInJ6hPsqVw/viewform?usp=dialog";
       }}>Join Now</button
     >
     <button
@@ -91,16 +70,16 @@
   </div>
 {/if}
 <div class="body">
-  <p>
-    Welcome to HackHW's Game Jam – a 48-hour programming marathon judged by a
-    panel of alumni in tech
+  <p style:margin-top={"20vh"}>
+    Welcome to HackHW's Hackathon - a 48-hour programming marathon judged by a
+    panel of alumni in tech.
   </p>
   <div class="buttons">
     <button
       id="join"
       class="dobuttons"
       on:click={() => {
-        window.location.href = "https://bsf8x7mgm2l.typeform.com/to/xOLsX7CJ";
+        window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSc52mNdDEJCgbfc097P2i7gtW0ZdeL0AITp1s8vInJ6hPsqVw/viewform?usp=dialog";
       }}>Join Now</button
     >
     <button

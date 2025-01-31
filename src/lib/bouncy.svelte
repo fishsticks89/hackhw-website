@@ -46,6 +46,8 @@
 
 <style>
     canvas {
+        pointer-events: none;
+
         position: absolute;
         z-index: 2000;
 
